@@ -3,6 +3,10 @@
 
 require "optparse"
 require "asciidoc/lsp/server"
+require "logger"
+
+log = Logger.new(File.open("asciidoc-lsp.log", "a"))
+log.level = Logger::DEBUG
 
 OptionParser.new do |opt|
   opt.banner = "Asciidoc Language Server Protocol Server"
@@ -12,6 +16,9 @@ OptionParser.new do |opt|
   end
 end.parse!
 
+log.debug("Starting.")
+
 server = AsciiDoc::Lsp::Server.new($stdin, $stdout)
+server.logger = log
 
 server.run

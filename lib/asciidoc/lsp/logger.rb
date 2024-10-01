@@ -9,6 +9,11 @@ module AsciiDoc
       def initialize
         super($stderr)
       end
+
+      def add(severity, message = nil, progname = nil)
+        super
+        $stderr.flush
+      end
     end
   end
 end

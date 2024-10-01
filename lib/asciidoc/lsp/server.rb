@@ -14,10 +14,10 @@ module AsciiDoc
 
       attr_accessor :logger
 
-      def initialize(in_stream = $stdin, out_stream = $stdout)
+      def initialize(logger, in_stream = $stdin, out_stream = $stdout)
         @in_stream = in_stream
         @out_stream = out_stream
-        @logger = Logger.new($stderr)
+        @logger = logger
         @message_processor = Message.new(@out_stream, @logger)
       end
 

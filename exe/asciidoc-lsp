@@ -18,7 +18,6 @@ end.parse!
 
 log.debug("Starting.")
 
-server = AsciiDoc::Lsp::Server.new($stdin, $stdout)
-server.logger = log
+server = AsciiDoc::Lsp::Server.new(log, $stdin, $stdout)
 
 server.run

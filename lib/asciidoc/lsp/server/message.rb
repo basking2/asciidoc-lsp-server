@@ -19,13 +19,11 @@ module AsciiDoc
         def handle(msg)
           case msg["method"]
           when "rando"
-            puts "Rando."
+            @logger.info("Rando")
           when "initialize"
-            $stderr.print("INIT!")
-            $stderr.flush
+            @logger.info("INIT")
           else
-            $stderr.print("Whoops.")
-            $stderr.flush
+            @logger.info("Whoops")
           end
         end
       end

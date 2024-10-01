@@ -1,0 +1,17 @@
+#! /usr/bin/env ruby
+# frozen_string_literal: true
+
+require "optparse"
+require "asciidoc/lsp/server"
+
+OptionParser.new do |opt|
+  opt.banner = "Asciidoc Language Server Protocol Server"
+  opt.on("-v", "--version") do
+    puts AsciiDoc::Lsp::Server::VERSION
+    exit 0
+  end
+end.parse!
+
+server = AsciiDoc::Lsp::Server.new($stdin, $stdout)
+
+server.run

@@ -4,12 +4,12 @@ require_relative "lib/asciidoc/lsp/server/version"
 
 Gem::Specification.new do |spec|
   spec.name = "asciidoc-lsp-server"
-  spec.version = Asciidoc::Lsp::Server::VERSION
+  spec.version = AsciiDoc::Lsp::Server::VERSION
   spec.authors = ["Sam Baskinger"]
   spec.email = ["basking2@yahoo.com"]
 
-  spec.summary = "Asciidoc LSP Implemenation"
-  spec.description = "A language server protocol implementation for Asciidoc."
+  spec.summary = "AsciiDoc LSP Implemenation"
+  spec.description = "A language server protocol implementation for AsciiDoc."
   spec.homepage = "https://github.com/basking2/asciidoc-lsp-server"
   spec.license = "MIT"
   spec.required_ruby_version = ">= 3.0.0"

@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
-module Asciidoc
+module AsciiDoc
   module Lsp
-    module Server
+    class Server
       VERSION = "0.1.0"
     end
   end

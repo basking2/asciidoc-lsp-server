@@ -32,7 +32,7 @@ module AsciiDoc
             @logger.info(body)
             body = JSON.parse(body)
 
-            @message_procesor.handle(body)
+            @message_processor.handle(body)
           elsif line =~ /content-length: (\d+)/i
             body_length = Regexp.last_match[1].to_i
             @logger.info("D #{line}")

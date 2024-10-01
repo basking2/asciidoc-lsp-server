@@ -3,9 +3,9 @@
 
 require "optparse"
 require "asciidoc/lsp/server"
-require "logger"
+require "asciidoc/lsp/logger"
 
-log = Logger.new(File.open("asciidoc-lsp.log", "a"))
+log = AsciiDoc::Lsp::Logger.new
 log.level = Logger::DEBUG
 
 OptionParser.new do |opt|
